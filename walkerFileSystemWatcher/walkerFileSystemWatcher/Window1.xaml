@@ -1,0 +1,25 @@
+﻿<Window x:Name="queryWindow" x:Class="walkerFileSystemWatcher.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:walkerFileSystemWatcher"
+        mc:Ignorable="d"
+        Title="Query" Height="382.312" Width="763.062" ResizeMode="CanMinimize">
+    <Grid>
+        <DataGrid x:Name="queryGrid" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Width="735" Height="271">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding watchingPath}" Header="Watching" IsReadOnly="True" SortDirection="Ascending" Width="125"/>
+                <DataGridTextColumn Binding="{Binding userName}" Header="User" Width="65" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding fileName}" Header="File Name" Width="100" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding filePath}" Header="Path" Width="200" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding fileEvent}" Header="Event" Width="75" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding time}" Header="Time" Width="75" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding date}" Header="Date" Width="75" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="queryforLabel" Content="Enter filename or extension:" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="queryforBox" HorizontalAlignment="Left" Margin="172,24,0,0" VerticalAlignment="Top" Width="128" IsEditable="True" Height="23"/>
+        <Button x:Name="queryButton" Content="Query DB" HorizontalAlignment="Left" Margin="361,19,0,0" VerticalAlignment="Top" Width="95" Height="30" Click="queryButton_Click"/>
+    </Grid>
+</Window>

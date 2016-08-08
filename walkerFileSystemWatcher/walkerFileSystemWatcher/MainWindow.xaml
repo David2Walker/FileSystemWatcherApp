@@ -1,0 +1,50 @@
+﻿<Window x:Class="walkerFileSystemWatcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:walkerFileSystemWatcher"
+        mc:Ignorable="d"
+        Title="File System Watcher" Height="500" Width="750" ResizeMode="CanMinimize">
+    <Grid>
+        <Menu IsMainMenu="True" Margin="0,0,0,441">
+            <MenuItem x:Name="watcherMenuButton" Header="_File Watcher">
+                <MenuItem x:Name="startMenuButton" Header="_Start" Click="startButton_Click"/>
+                <MenuItem x:Name="stopMenuButton" Header="S_top" Click="stopButton_Click" />
+            </MenuItem>
+            <MenuItem Header="_Database">
+                <MenuItem x:Name="queryMenuButton" Header="_Query" Click="queryButton_Click"/>
+                <MenuItem x:Name="cleardbMenuButton" Header="_Clear DB" Click="cleardbButton_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem x:Name="aboutMenuButton" Header="_About" Click="aboutMenuButton_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="227" Margin="8,211,0,0" VerticalAlignment="Top" Width="722">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding watchingPath}" Header="Watching" IsReadOnly="True" SortDirection="Ascending" Width="120"/>
+                <DataGridTextColumn Binding="{Binding userName}" Header="User" Width="75" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding fileName}" Header="File Name" Width="100" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding filePath}" Header="Path" Width="200" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding fileEvent}" Header="Event" Width="70" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding time}" Header="Time" Width="75" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding date}" Header="Date" Width="75" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="statusLabel" Content="Waiting for start..." HorizontalAlignment="Left" Margin="12,435,0,0" VerticalAlignment="Top" Width="275"/>
+
+        <Label x:Name="extensionLabel" Content="Extension to watch (empty for all)" HorizontalAlignment="Left" Height="32" Margin="214,40,0,0" VerticalAlignment="Top" Width="193"/>
+        <ComboBox x:Name="extensionBox" HorizontalAlignment="Left" Margin="218,65,0,0" VerticalAlignment="Top" Width="120" IsEditable="True" Height="23"/>
+
+        <Label x:Name="watchdirLabel" Content="Directory to watch        *Required" HorizontalAlignment="Left" Height="32" Margin="7,41,0,0" VerticalAlignment="Top" Width="193"/>
+        <TextBox x:Name="watchdirBox" HorizontalAlignment="Left" Height="23" Margin="12,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
+        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Height="34" Margin="12,163,0,0" VerticalAlignment="Top" Width="78" Click="startButton_Click"/>
+        <Button x:Name="stopButton" Content="Stop" HorizontalAlignment="Left" Height="34" Margin="113,163,0,0" VerticalAlignment="Top" Width="78" Click="stopButton_Click"/>
+        <Button x:Name="queryButton" Content="Query" HorizontalAlignment="Left" Height="34" Margin="640,163,0,0" VerticalAlignment="Top" Width="78" Click="queryButton_Click"/>
+        <Label x:Name="emailLabel" Content="Email" HorizontalAlignment="Left" Height="32" Margin="7,100,0,0" VerticalAlignment="Top" Width="193"/>
+        <TextBox x:Name="emailBox" HorizontalAlignment="Left" Height="23" Margin="12,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" LostFocus="emailBox_LostFocus"/>
+        <CheckBox x:Name="emailcheckBox" Content="Send Email Alerts" HorizontalAlignment="Left" Margin="200,129,0,0" VerticalAlignment="Top" Width="150" Checked="emailcheckBox_Checked" Unchecked="emailcheckBox_Unchecked"/>
+
+    </Grid>
+</Window>
