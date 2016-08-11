@@ -134,12 +134,12 @@ namespace walkerFileSystemWatcher
             while (reader.Read())
             {
                 String watching = reader.GetString(0);
-                String userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
-                String name = reader.GetString(1);
-                String path = reader.GetString(2);
-                String fileevent = reader.GetString(3);
-                String date = reader.GetString(4);
-                String time = reader.GetString(5);
+                String userName = reader.GetString(1);
+                String name = reader.GetString(2);
+                String path = reader.GetString(3);
+                String fileevent = reader.GetString(4);
+                String date = reader.GetString(5);
+                String time = reader.GetString(6);
 
                 watchedObject watched = new watchedObject(watching, userName, name, path, fileevent, date, time);
 

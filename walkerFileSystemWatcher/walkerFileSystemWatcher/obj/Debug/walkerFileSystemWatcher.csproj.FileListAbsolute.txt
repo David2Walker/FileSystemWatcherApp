@@ -14,3 +14,19 @@ c:\users\david\documents\visual studio 2015\Projects\walkerFileSystemWatcher\wal
 c:\users\david\documents\visual studio 2015\Projects\walkerFileSystemWatcher\walkerFileSystemWatcher\obj\Debug\walkerFileSystemWatcher.pdb
 C:\Users\David\Documents\Visual Studio 2015\Projects\walkerFileSystemWatcher\walkerFileSystemWatcher\obj\Debug\Window1.g.cs
 C:\Users\David\Documents\Visual Studio 2015\Projects\walkerFileSystemWatcher\walkerFileSystemWatcher\obj\Debug\Window1.baml
+C:\Users\David\Documents\GitHub\FileSystemWatcherApp\walkerFileSystemWatcher\walkerFileSystemWatcher\bin\Debug\walkerFileSystemWatcher.exe.config
+C:\Users\David\Documents\GitHub\FileSystemWatcherApp\walkerFileSystemWatcher\walkerFileSystemWatcher\obj\Debug\walkerFileSystemWatcher.exe
+C:\Users\David\Documents\GitHub\FileSystemWatcherApp\walkerFileSystemWatcher\walkerFileSystemWatcher\obj\Debug\walkerFileSystemWatcher.pdb
+C:\Users\David\Documents\GitHub\FileSystemWatcherApp\walkerFileSystemWatcher\walkerFileSystemWatcher\bin\Debug\walkerFileSystemWatcher.exe
+C:\Users\David\Documents\GitHub\FileSystemWatcherApp\walkerFileSystemWatcher\walkerFileSystemWatcher\bin\Debug\walkerFileSystemWatcher.pdb
+C:\Users\David\Documents\GitHub\FileSystemWatcherApp\walkerFileSystemWatcher\walkerFileSystemWatcher\obj\Debug\walkerFileSystemWatcher.csprojResolveAssemblyReference.cache
+C:\Users\David\Documents\GitHub\FileSystemWatcherApp\walkerFileSystemWatcher\walkerFileSystemWatcher\obj\Debug\MainWindow.g.cs
+C:\Users\David\Documents\GitHub\FileSystemWatcherApp\walkerFileSystemWatcher\walkerFileSystemWatcher\obj\Debug\Window1.g.cs
+C:\Users\David\Documents\GitHub\FileSystemWatcherApp\walkerFileSystemWatcher\walkerFileSystemWatcher\obj\Debug\App.g.cs
+C:\Users\David\Documents\GitHub\FileSystemWatcherApp\walkerFileSystemWatcher\walkerFileSystemWatcher\obj\Debug\walkerFileSystemWatcher_MarkupCompile.cache
+C:\Users\David\Documents\GitHub\FileSystemWatcherApp\walkerFileSystemWatcher\walkerFileSystemWatcher\obj\Debug\walkerFileSystemWatcher_MarkupCompile.lref
+C:\Users\David\Documents\GitHub\FileSystemWatcherApp\walkerFileSystemWatcher\walkerFileSystemWatcher\obj\Debug\MainWindow.baml
+C:\Users\David\Documents\GitHub\FileSystemWatcherApp\walkerFileSystemWatcher\walkerFileSystemWatcher\obj\Debug\Window1.baml
+C:\Users\David\Documents\GitHub\FileSystemWatcherApp\walkerFileSystemWatcher\walkerFileSystemWatcher\obj\Debug\walkerFileSystemWatcher.g.resources
+C:\Users\David\Documents\GitHub\FileSystemWatcherApp\walkerFileSystemWatcher\walkerFileSystemWatcher\obj\Debug\walkerFileSystemWatcher.Properties.Resources.resources
+C:\Users\David\Documents\GitHub\FileSystemWatcherApp\walkerFileSystemWatcher\walkerFileSystemWatcher\obj\Debug\walkerFileSystemWatcher.csproj.GenerateResource.Cache
