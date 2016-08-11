@@ -6,7 +6,13 @@ Known Issues:
 	- more information:
 		http://stackoverflow.com/questions/1764809/filesystemwatcher-changed-event-is-raised-twice
 		http://weblogs.asp.net/ashben/31773
-	
+
+- Issue in data binding to the data table during update causing application to crash
+	- I think the issue is related to changes happening too quickly
+	- this issue stems from the background thread updating the table in the UI from what I've read
+	- None of the solutions I was finding online were a solid solution
+		- Solutions seemed to be very dependant on each person's situation and nothing I tried helped.
+	- I'm really unsure why this is happening, it wasn't happening previously
 
 Description/Features:
 File System Watcher
