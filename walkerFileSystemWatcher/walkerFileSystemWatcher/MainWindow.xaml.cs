@@ -61,7 +61,7 @@ namespace walkerFileSystemWatcher
 
             alertTimer = new Timer();
             alertTimer.Elapsed += new ElapsedEventHandler(sendAlert);
-            alertTimer.Interval = 30000; //300000 = 5 minutes, 60000 = 1 minute
+            alertTimer.Interval = 60000; //300000 = 5 minutes, 60000 = 1 minute
             alertTimer.Enabled = false;
             alertTimer.AutoReset = false;
 
@@ -446,9 +446,7 @@ namespace walkerFileSystemWatcher
 
         private void UpdateGrid(Object datagrid)
         {
-            DataGrid dg = (DataGrid)datagrid;
-
-            dg.Items.Refresh();
+            dataGrid.Items.Refresh();
         }
     }
 }
