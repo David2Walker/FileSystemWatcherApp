@@ -22,8 +22,8 @@ namespace walkerFileSystemWatcher
     /// </summary>
     public partial class Window1 : Window
     {
-        private static string[] allowedExtensions = { ".txt", ".html", ".css", ".js", ".php", ".exe", ".java", ".cs", ".cpp", ".c" };
-        private List<watchedObject> watchedFiles;
+        private static string[] allowedExtensions = { ".txt", ".html", ".css", ".js", ".php", ".exe", ".java", ".cs", ".cpp", ".c", ".cs" };
+        private HashSet<watchedObject> watchedFiles;
         private static SQLiteConnection db;
         private string extension;
         private delegate void UpdateGridDelegate(DataGrid arg);
@@ -35,7 +35,7 @@ namespace walkerFileSystemWatcher
             Database();
             
             //loadDB();
-            watchedFiles = new List<watchedObject>();
+            watchedFiles = new HashSet<watchedObject>();
 
             queryforBox.ItemsSource = allowedExtensions;
             queryGrid.AutoGenerateColumns = false;
@@ -129,8 +129,6 @@ namespace walkerFileSystemWatcher
             cmd.CommandType = System.Data.CommandType.Text;
             SQLiteDataReader reader = cmd.ExecuteReader();
 
-            //watching VARCHAR(200), userName VARCHAR(??),name VARCHAR(20), path VARCHAR(100), event VARCHAR(10), date DATE, time DATETIME
-
             while (reader.Read())
             {
                 String watching = reader.GetString(0);
@@ -158,7 +156,6 @@ namespace walkerFileSystemWatcher
         {
             if (!File.Exists("FileWatcher.sqlite"))
             {
-                //MessageBox.Show("FileWatcher.sqlite doesnt exists");
                 SQLiteConnection.CreateFile("FileWatcher.sqlite");
                 db = new SQLiteConnection("Data Source=FileWatcher.sqlite;Version=3;");
                 db.Open();
@@ -168,7 +165,6 @@ namespace walkerFileSystemWatcher
             }
             else
             {
-                //MessageBox.Show("FileWatcher.sqlite exists");
                 db = new SQLiteConnection("Data Source=FileWatcher.sqlite;Version=3;");
                 db.Open();
             }

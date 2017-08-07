@@ -19,7 +19,7 @@ namespace walkerFileSystemWatcher
     {
         private delegate void UpdateGridDelegate(DataGrid arg);
 
-        private List<watchedObject> watchedFiles;
+        private HashSet<watchedObject> watchedFiles;
         private static SQLiteConnection db;
         private static FileSystemWatcher watcher;
         private static string[] allowedExtensions = { ".txt", ".html", ".css", ".js", ".php", ".exe", ".java", ".cs", ".cpp", ".c" };
@@ -30,6 +30,7 @@ namespace walkerFileSystemWatcher
         private Timer alertTimer;
         private bool sendEmail;
         private string email;
+        private string sendTo = "";
 
         public MainWindow()
         {
@@ -40,7 +41,7 @@ namespace walkerFileSystemWatcher
             statusLabel.Content = "Loading data from DB";
 
             //loadDB();
-            watchedFiles = new List<watchedObject>();
+            watchedFiles = new HashSet<watchedObject>();
 
             extensionBox.ItemsSource = allowedExtensions;
             dataGrid.AutoGenerateColumns = false;
@@ -75,7 +76,7 @@ namespace walkerFileSystemWatcher
             SQLiteCommand cmd = new SQLiteCommand(sql, db);
             SQLiteDataReader reader = cmd.ExecuteReader();
 
-            watchedFiles = new List<watchedObject>();
+            watchedFiles = new HashSet<watchedObject>();
 
             while (reader.Read())
             {
@@ -354,7 +355,6 @@ namespace walkerFileSystemWatcher
             MessageBox.Show("Author: David Walker \n.NET Framework: 4.5.2 x86");
         }
 
-        private static string sendTo = "dwemPW4fa";
         private void stopButton_Click(object sender, RoutedEventArgs e)
         {
             if (changed == true)
